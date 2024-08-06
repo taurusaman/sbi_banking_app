@@ -53,7 +53,7 @@ public class AccountsController {
             @PathVariable Long id,
             @RequestBody  Map<String, Double> request) {
 
-        double amount = request.get("amount");
+        Double amount = request.get("amount");
         AccountsDto accountsDto = accountservice.withdraw(id, amount);
         return ResponseEntity.ok(accountsDto);
 

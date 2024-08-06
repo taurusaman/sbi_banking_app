@@ -7,22 +7,20 @@ public class AccountMapper {
 
     //map to java object
     public static Accounts mapToAccount(AccountsDto accountsDto){
-             Accounts accounts = new Accounts(
+        return new Accounts(
                  accountsDto.getId(),
                      accountsDto.getAccountHolderName(),
                      accountsDto.getBalance()
              );
-             return  accounts;
     }
 
-    //map to java object
+    //java object to map
     public static AccountsDto mapToAccountDto(Accounts accounts){
-         AccountsDto accountsDto = new AccountsDto(
+
+        return new AccountsDto(
                  accounts.getId(),
                  accounts.getAccountHolderName(),
                  accounts.getBalance()
          );
-
-         return accountsDto;
     }
 }
